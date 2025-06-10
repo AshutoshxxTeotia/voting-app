@@ -17,6 +17,7 @@ public class PollService {
     private final PollRepository pollRepository;
 
     public Poll createPoll(Poll poll) {
+        poll.setId(null);
         return pollRepository.save(poll);
     }
     public List<Poll> getAllPolls() {
